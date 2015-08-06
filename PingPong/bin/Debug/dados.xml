@@ -1,0 +1,82 @@
+<ArrayOfHostModel>
+  <HostModel>
+    <id_host>1</id_host>
+    <nome>google</nome>
+    <ip>8.8.8.8</ip>
+    <ativo>true</ativo>
+    <em_pe>false</em_pe>
+    <ultima_alteracao>05/08/2015 19:37:31</ultima_alteracao>
+  </HostModel>
+  <HostModel>
+    <id_host>3</id_host>
+    <nome>google</nome>
+    <ip>8.8.8.8</ip>
+    <ativo>true</ativo>
+    <em_pe>false</em_pe>
+    <ultima_alteracao>05/08/2015 19:37:30</ultima_alteracao>
+  </HostModel>
+  <HostModel>
+    <id_host>5</id_host>
+    <nome>facebook</nome>
+    <ip>31.13.73.1</ip>
+    <ativo>true</ativo>
+    <em_pe>false</em_pe>
+    <ultima_alteracao>05/08/2015 19:37:31</ultima_alteracao>
+  </HostModel>
+  <HostModel>
+    <id_host>6</id_host>
+    <nome>ERRADO</nome>
+    <ip>666.7.7.7</ip>
+    <ativo>true</ativo>
+    <em_pe>false</em_pe>
+    <ultima_alteracao>05/08/2015 13:37:07</ultima_alteracao>
+  </HostModel>
+  <HostModel>
+    <id_host>7</id_host>
+    <nome>OCMEA</nome>
+    <ip>200.133.7.22</ip>
+    <ativo>true</ativo>
+    <em_pe>false</em_pe>
+    <ultima_alteracao>05/08/2015 19:37:31</ultima_alteracao>
+  </HostModel>
+  <HostModel>
+    <id_host>9</id_host>
+    <nome>Teste</nome>
+    <ip>8.8.8.8</ip>
+    <ativo>true</ativo>
+    <em_pe>false</em_pe>
+    <ultima_alteracao>05/08/2015 19:37:31</ultima_alteracao>
+  </HostModel>
+  <HostModel>
+    <id_host>13</id_host>
+    <nome>TESTAO</nome>
+    <ip>8.8.8.8</ip>
+    <ativo>true</ativo>
+    <em_pe>false</em_pe>
+    <ultima_alteracao>05/08/2015 19:37:31</ultima_alteracao>
+  </HostModel>
+  <HostModel>
+    <id_host>14</id_host>
+    <nome>TESTINHO</nome>
+    <ip>7.7.77.7</ip>
+    <ativo>true</ativo>
+    <em_pe>false</em_pe>
+    <ultima_alteracao>05/08/2015 13:56:33</ultima_alteracao>
+  </HostModel>
+  <HostModel>
+    <id_host>15</id_host>
+    <nome>test</nome>
+    <ip>172.16.202.40</ip>
+    <ativo>true</ativo>
+    <em_pe>false</em_pe>
+    <ultima_alteracao>05/08/2015 17:35:36</ultima_alteracao>
+  </HostModel>
+  <HostModel>
+    <id_host>16</id_host>
+    <nome>testttt</nome>
+    <ip>172.16.202.33</ip>
+    <ativo>true</ativo>
+    <em_pe>false</em_pe>
+    <ultima_alteracao>05/08/2015 19:37:31</ultima_alteracao>
+  </HostModel>
+</ArrayOfHostModel>
