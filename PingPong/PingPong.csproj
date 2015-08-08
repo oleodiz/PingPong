@@ -78,7 +78,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\HostModel.cs" />
+    <Compile Include="Model\Host.cs" />
+    <Compile Include="Model\Hosts.cs" />
     <Compile Include="NovoHost.cs">
       <SubType>Form</SubType>
     </Compile>

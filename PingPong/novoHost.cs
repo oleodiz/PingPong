@@ -15,7 +15,7 @@ namespace PingPong
 {
     public partial class NovoHost : MetroForm
     {
-        HostModel host;
+        Host host;
         AcessoHost banco;
         bool cadastrou;
         public NovoHost(AcessoHost banco)
@@ -28,13 +28,13 @@ namespace PingPong
         {
             return cadastrou;
         }
-        public HostModel getHost()
+        public Host getHost()
         {
             return host;
         }
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            host = new HostModel();
+            host = new Host();
             host.nome = txt_nome.Text;
             host.ip = txt_ip.Text;
             host.em_pe = false;

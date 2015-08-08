@@ -24,10 +24,10 @@ namespace PingPong.Service
             conn = new SQLiteConnection(stringConn);
         }
 
-        public List<HostModel> obterHosts()
+        public List<Host> obterHosts()
         {
             DataTable dt = new DataTable();
-            List<HostModel> hosts = new List<HostModel>();
+            List<Host> hosts = new List<Host>();
             String insSQL = "select id_host, nome, ip, cast (ativo as varchar) as ativo, cast(em_pe as varchar) as em_pe, ultima_alteracao from TB_HOST";
 
             SQLiteDataAdapter da = new SQLiteDataAdapter(insSQL, stringConn);
@@ -36,7 +36,7 @@ namespace PingPong.Service
 
             for (int i = 0; i < dt.Rows.Count; i++ )
             {
-                HostModel h = new HostModel();
+                Host h = new Host();
 
                 h.id_host = Convert.ToInt32(dt.Rows[i]["ID_HOST"].ToString());
                 h.nome = dt.Rows[i]["NOME"].ToString();
@@ -49,7 +49,7 @@ namespace PingPong.Service
             return hosts;
         }
 
-        public void inserirHost(HostModel host)
+        public void inserirHost(Host host)
         {
             DataTable dt = new DataTable();
             String insSQL = "INSERT INTO TB_HOST (NOME, IP, ATIVO, EM_PE, ULTIMA_ALTERACAO) VALUES ('"+
@@ -60,7 +60,7 @@ namespace PingPong.Service
             da.Fill(dt);
         }
 
-        public void atualizarHost(HostModel host)
+        public void atualizarHost(Host host)
         {
             DataTable dt = new DataTable();
             String insSQL = "UPDATE TB_HOST SET NOME = '" + host.nome + "', IP='" + host.ip + "', ATIVO = '" + host.ativo + "', EM_PE = '" + host.em_pe + "', ULTIMA_ALTERACAO = '" + host.ultima_alteracao +"' WHERE ID_HOST = "+host.id_host;
@@ -70,7 +70,7 @@ namespace PingPong.Service
             da.Fill(dt);
         }
 
-        public void removerHost(HostModel host)
+        public void removerHost(Host host)
         {
             DataTable dt = new DataTable();
             String insSQL = "DELETE FROM TB_HOST WHERE ID_HOST = " + host.id_host;

@@ -25,7 +25,7 @@ namespace PingPong
     public partial class Form1 : MetroForm
     {
         AcessoHost banco;
-        List<HostModel> hosts;
+        List<Host> hosts;
         public Form1()
         {
             InitializeComponent();
@@ -40,7 +40,7 @@ namespace PingPong
         {
             int i = 0;
             lst_hosts.Items.Clear();
-            foreach (HostModel h in hosts)
+            foreach (Host h in hosts)
             {
                 lst_hosts.Items.Add(h.id_host + "");
                 lst_hosts.Items[i].SubItems.Add(h.nome);
@@ -54,14 +54,14 @@ namespace PingPong
 
         public void iniciaChecagem()
         {
-            foreach (HostModel h in hosts)
+            foreach (Host h in hosts)
             {
                 Thread t = new Thread(() => vaiTestando(h));
                 t.Start();
             }         
         }
 
-        public void vaiTestando(HostModel host)
+        public void vaiTestando(Host host)
         {
             while (host.ativo)
             {
@@ -71,7 +71,7 @@ namespace PingPong
             }
         }
 
-        public void PingHost(HostModel host, int numeroTestes)
+        public void PingHost(Host host, int numeroTestes)
         {
             bool pingou = true;
             Ping pinger = new Ping();
@@ -135,8 +135,8 @@ namespace PingPong
             hosts = banco.obterHosts();
             preencheList();
 
-            XElement xml = new Conversao().parseToXML<List<HostModel>>(hosts);
-            System.IO.File.WriteAllText(Properties.Settings.Default.diretorioDados+@"\dados.xml", xml.ToString());
+            XElement xml = new Conversao().parseToXML<List<Host>>(hosts);
+            System.IO.File.WriteAllText(Properties.Settings.Default.diretorioDados + @"\dados.xml", xml.ToString().Replace("ArrayOfHost", "list").Replace("Host", "Model.Host"));
 
         }
 
